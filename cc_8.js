@@ -34,3 +34,9 @@ let totalPayment = principal + (principal * rate * time); // Formula
 return `Total Payment: $${totalPayment.toFixed(2)}`;}
 console.log(calculateLoanPayment(1000, 0.05, 2)); // output 1100.00
 console.log(calculateLoanPayment(5000, 0.07, 3)); // output 6050.00
+
+// Task 6 - Identifying Large Transactions //
+let transactions = [200, 1500, 3200, 800, 2500]; // Transactions
+function filterLargeTransactions(transactions, filterFunction) { // Function
+return transactions.filter(filterFunction);}
+console.log(filterLargeTransactions(transactions, amount => amount > 1000)); // output [1500, 3200, 2500]
