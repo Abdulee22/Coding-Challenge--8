@@ -50,3 +50,10 @@ return `Total Cart Value: $${total}`;};}
 let cart = createCartTracker();
 console.log(cart(20)); // output 20
 console.log(cart(35)); // output 55
+
+// Task 8 - Savings Growth Projection //
+function calculateSavings(years, amount) { // Function
+ if (years >= 10) return `Projected Savings: $${amount.toFixed(2)}`; // Growth by 5% for 10 years
+ return calculateSavings(years + 1, amount * 1.05);}
+console.log(calculateSavings(8, 1000)); // output 1102.50
+console.log(calculateSavings(5, 5000)); // output 6381.41
