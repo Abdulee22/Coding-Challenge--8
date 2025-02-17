@@ -40,3 +40,13 @@ let transactions = [200, 1500, 3200, 800, 2500]; // Transactions
 function filterLargeTransactions(transactions, filterFunction) { // Function
 return transactions.filter(filterFunction);}
 console.log(filterLargeTransactions(transactions, amount => amount > 1000)); // output [1500, 3200, 2500]
+
+// Task 7 - Shopping Cart Tracker //
+function createCartTracker() { // Function
+let total = 0;
+return function(amount) {
+ total += amount; // Running Total
+return `Total Cart Value: $${total}`;};}
+let cart = createCartTracker();
+console.log(cart(20)); // output 20
+console.log(cart(35)); // output 55
