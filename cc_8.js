@@ -12,4 +12,11 @@ return `Final Price: $${finalPrice.toFixed(2)}`;};
 console.log(calculateDiscount(100, 0.2)); // output 80.00
 console.log(calculateDiscount(250, 0.15)); // output 212.50
 
+// Task 3 - Service Fee Calculation //
+const calculateServiceFee = (amount, serviceType) => { // Function
+let feeRate = serviceType === "Premium" ? 0.15 : serviceType === "Standard" ? 0.10 : 0.05;
+let fee = amount * feeRate; // Fee Calculation
+return `Service Fee: $${fee.toFixed(2)}`;};
+console.log(calculateServiceFee(200, "Premium")); // output 30.00
+console.log(calculateServiceFee(500, "Standard")); // output 50.00
 
