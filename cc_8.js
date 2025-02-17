@@ -27,3 +27,10 @@ let totalCost = (dailyRate * days) + (insurance ? 20 * days : 0);
 return `Total Rental Cost: $${totalCost}`;}
 console.log(calculateRentalCost(3, "Economy", true)); // output 180
 console.log(calculateRentalCost(5, "Luxury", false)); // output 500
+
+// Task 5 - Loan Payment Calculation //
+function calculateLoanPayment(principal, rate, time) { // Function
+let totalPayment = principal + (principal * rate * time); // Formula
+return `Total Payment: $${totalPayment.toFixed(2)}`;}
+console.log(calculateLoanPayment(1000, 0.05, 2)); // output 1100.00
+console.log(calculateLoanPayment(5000, 0.07, 3)); // output 6050.00
